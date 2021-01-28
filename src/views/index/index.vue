@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <!-- <Login></Login> -->
+    <Login></Login>
     <!--cars dom渲染-->
     <!-- <Cars></Cars> -->
     <!--地图-->
