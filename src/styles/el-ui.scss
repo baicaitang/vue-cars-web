@@ -1,0 +1,159 @@
+.cars-form-ui{
+    
+    .get-verificationCode{
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        bottom: 4px;
+        width: 100px;
+        height: 32px;
+        line-height: 32px;
+        border-radius: 5px;
+        text-align: center;
+        background-color: #34393f;
+        border: none;
+        outline: none;
+        z-index: 2;
+        font-size: 13px;
+        color: #f4f4f4;
+        cursor: pointer;
+        @include webkit(box-sizing,border-box);
+    }
+
+    
+
+    .bank-select{
+        position: relative;
+        padding: 10px;
+        margin-bottom: 22px;
+        width: 100%;
+        background-color: #202429;
+        border: 1px solid #202429;        
+        color: rgba(255, 255, 255, .2);
+        border-radius: 5px;
+        height: 40px;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        @include webkit(box-sizing,border-box);
+        // appearance: none;
+       
+
+        .selected{
+            color: #fff;
+        }
+
+        &:after {
+            content: ''; 
+            position: absolute;
+            top: 14px;
+            right: 13px;
+            color: #0d0e10;
+            height: 7px;
+            width: 7px;
+            border-bottom: 1px solid#0d0e10;
+            border-left: 1px solid#0d0e10;
+            
+            @include webkit(transform, rotate(-45deg));
+        }
+
+       
+        
+
+        
+    }
+
+    .option {
+        margin-bottom: 22px;
+        padding: 10px 0;
+        position: relative;
+        border: 1px solid #000;
+        border-radius: 10px;
+        background-color: rgb(245, 237, 237);
+
+        &:after{
+            content: "";
+            position: absolute;
+            top: -7px;
+            left: 30px;
+            width: 15px;
+            height: 15px;
+            background-color: rgb(245, 237, 237);
+            // border: 1px solid red;
+            @include webkit(transform,rotate(-45deg));
+        }
+
+        .bank-option {
+            letter-spacing: 5px;
+            padding: 8px 10px;
+            height: 15px;
+            cursor: pointer;
+            color: #000;
+            font-size: 14px;
+            line-height: 15px; 
+            border-bottom: 1px dotted #cfcdcd;
+
+            &:hover{
+                background-color: rgb(220, 218, 218);
+            }
+        }
+
+
+    }
+    
+}
+
+.el-input__inner {
+    background-color: #202429 !important;
+    border: 1px solid #202429 !important;
+    color: #fff !important;
+
+    
+
+    &::-webkit-input-placeholder {
+        /* Chrome/Opera/Safari */
+        color: rgba(255, 255, 255, .2);
+
+    }
+
+    &::-moz-placeholder {
+        /* Firefox 19+ */
+        color: rgba(255, 255, 255, .2);
+
+    }
+
+    &:-moz-placeholder {
+        /* Firefox 19+ */
+        color: rgba(255, 255, 255, .2);
+
+    }
+
+    &:-ms-input-placeholder {
+        /* IE 10+ */
+        color: rgba(255, 255, 255, .2);
+
+    }
+}
+
+.btn-confirm{
+    display: block;
+    width: 100%;
+}
+
+/* upload-photo */
+.el-upload--picture-card {
+    margin: 15px 0 10px 0;
+    background-color: #32373d;
+    border: 2px dashed#282d32;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 150px;
+    line-height: 150px;
+    vertical-align: top;
+}
+
+.el-upload--picture-card i {
+    font-size: 22px;
+    color: #282d32;
+}

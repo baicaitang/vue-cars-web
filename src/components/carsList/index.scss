@@ -1,0 +1,325 @@
+.cars-item{
+    margin: auto;
+    padding: 30px 20px 0;
+    // width: 505px;
+    height: 257px;
+    background-color: #fff;
+    border-radius: 24px;
+    
+    @include webkit(box-shadow, 0 0 18px 0 rgba(0, 0, 0, .2));
+    @include webkit(box-sizing, border-box);
+
+    header{
+        // display: flex;
+        // h4,p{flex:1;}
+        // @include clearfix;
+        @extend %clearfix;
+    }
+    
+    .select-car-btn {
+        margin-left: -120px;
+        position: absolute;
+        left: 50%;
+        bottom: -42px;
+    }
+    
+}
+
+.cars-logo{
+    float: left;
+    
+    img{
+        margin-right: 10px;
+        display: inline-block;
+        height: 34px;
+        vertical-align: middle;
+    }
+
+    .name{
+        font-size: 16xp;
+    }
+
+    
+}
+.cars-attr {
+    float: right;
+    // text-align: right;
+    opacity: .5;
+    line-height: 34px;
+}
+
+.cars-content {
+    position: relative;
+    margin: 11px 0 7px;
+    @extend %clearfix;
+
+    .info{
+        position: absolute;
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // background-color: rgb(203, 203, 238);
+        align-items: center;
+
+        .car-number{
+            font-size: 18px;
+        }
+        .car-electric{
+            margin-top: 15px;
+
+            li{
+                display: inline-block;
+                margin-right: 3px;
+                width: 7px;
+                height: 24px;
+                border-radius: 100px;
+                background-color: #e1e1e1;
+            }
+
+            // &.active-li-1{
+            //     li:nth-child(1){
+            //          @include webkitA(background, linear-gradient(#17a8fa, #108dd9));
+            //     }
+            // }
+            // &.active-li-3{
+            //     li:nth-child(-n+3){
+            //         @include webkitA(background, linear-gradient(#17a8fa, #108dd9));
+            //     }
+            // }
+
+            @for $i from 1 through 10 {
+                &.active-li-#{$i} {
+                    li:nth-child(-n+#{$i}) {
+                        @include webkitA(background, linear-gradient(#17a8fa, #108dd9));
+                    }
+                }
+            }
+
+            li.active{
+                @include webkitA(background, linear-gradient(#17a8fa, #108dd9));
+                // background: -webkit-linear-gradient(#17a8fa,#108dd9);
+            }
+
+            
+
+        }
+    }
+
+    img {
+        height: 120px;
+        float: right;
+    }
+}
+
+.distance {
+    margin-left: 5px;
+    display: inline-block;
+    font-size: 20px;
+
+    strong {
+        margin: 0 5px;
+        font-size: 22px;
+    }
+
+    sub {
+        position: relative;
+        top: -1px;
+    }
+
+    sub:first-of-type {
+        opacity: 0.6;
+    }
+}
+
+.parking-link{
+    position: relative;
+    display: block;
+    border-top: 1px solid #e1e1e1;
+    color: $color-main;
+    opacity: .8;
+    line-height: 53px;
+
+    &:after{
+        content:"";
+        margin-top: -4px;
+        height: 8px;
+        width: 8px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        border-top:1px solid #e1e1e1;
+        border-right: 1px solid #e1e1e1;
+        @include webkit(transform,rotate(45deg))
+    }
+}
+
+.cars-detail {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 0;
+
+    .scroll{
+        padding: 0 10px;
+        height: 100%;
+        @include webkit(box-sizing, border-box);
+        //自动隐藏，滚动
+        overflow-y: auto;
+
+         /* 定义滚动条样式 */
+         &::-webkit-scrollbar {
+             
+             width: 0px;
+             height: 0px;
+             background-color: rgb(139, 236, 106);
+         }
+
+         /*定义滚动条轨道 内阴影+圆角*/
+         &::-webkit-scrollbar-track {
+             box-shadow: inset 0 0 0px rgba(240, 240, 240, .5);
+             border-radius: 10px;
+             background-color: rgba(240, 240, 240, .5);
+         }
+
+         /*定义滑块 内阴影+圆角*/
+         &::-webkit-scrollbar-thumb {
+             border-radius: 10px;
+             box-shadow: inset 0 0 0px rgba(240, 240, 240, .5);
+             background-color: rgba(240, 240, 240, .5);
+         }
+      
+    }
+
+    .column {
+         margin-bottom: 19px;
+        position: relative;
+        padding: 26px 0 20px;
+        font-size: 20px;
+        color: #34393f;
+        border-bottom: 1px solid #e1e1e1;
+
+        .close{
+           
+            position:absolute;
+            top: 23px;
+            right: 0px;
+            display: block;
+            width: 26px;
+            height: 26px;
+            cursor: pointer;
+            // background-color: rgb(233, 226, 226);
+
+            &:before,
+            &:after{
+                content:"";
+                margin-top: -10px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                height: 20px;
+                border-left: 2px solid #999c9f;
+            }
+
+            &:before{
+                @include webkit(transform,rotate(45deg))
+            }
+            &:after{
+                @include webkit(transform,rotate(-45deg))
+            }
+        }
+    }
+
+    .car-electric-box{
+        margin-top: 17px ;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: #fff;
+        @include webkit(box-shadow,0 0 10px 0 rgba(0,0,0,.5));
+    
+        .e-bg{
+            display: block;
+            height: 8px;
+            background-color: #e1e1e1;
+            border-radius: 100px;
+        }
+
+        .e-high{
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background-color: #0f9cee;
+            border-radius: 100px;
+        }
+    
+    }
+
+    .info{
+        margin: 32px 0 28px;
+    }
+
+    .cars-type-list{
+
+        li{
+            margin-bottom: 15px;
+            padding: 0 17px 0 20px;
+            height: 43px;
+            background-color: #f3f3f3;
+            border-color: #f3f3f3;
+            border-style: solid;
+            border-width: 2px;
+            border-radius: 10px;
+            font-size: 16px;
+            line-height: 43px;
+
+            &.current{
+                border-color: #0f9cee;
+            }
+        }
+
+        .name{
+            float: left;
+        }
+        .price{
+            float: right;
+        }
+
+    }
+
+    .clause{
+        margin: 30px 0 70px 0;
+        @extend %clearfix;
+
+        i{
+            float:right;
+            width: 20px;
+            height: 20px;
+            border-radius: 100px;
+            background-color: #ccc;
+
+            &.current{
+                background-color: #000;
+            }
+
+            &:before{
+                content: "";
+                margin: 5px 0 0 5px;
+                display: block;
+                width: 8px;
+                height: 4px;
+                border-left:3px solid #fff;
+                border-bottom:3px solid #fff;
+                @include webkit(transform,rotate(-45deg))
+            }
+        }
+    }
+
+    
+}
+
+

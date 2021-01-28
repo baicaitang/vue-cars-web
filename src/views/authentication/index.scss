@@ -1,0 +1,85 @@
+.tags{
+    display: flex;
+    width: 100%;
+
+    .tag{
+        // border: 1px solid red;
+        flex: 1;
+        text-align: center;
+        display: block;
+        color: #54585c;
+        font-size: 15px;
+        padding: 15px 0;
+        cursor: pointer;
+
+        .line {
+            margin: 10px 72px;
+            border-radius: 10px;
+            border-bottom: 8px solid #00a3ff;
+            opacity: 0.3;
+        }
+        
+        // &:hover {
+        //     color: #fff;
+
+        //     .line{
+        //         opacity: 1;
+        //     }
+            
+        // }
+
+        &:focus{
+            color: #fff;
+
+            .line {
+                opacity: 1;
+            }
+        }
+
+        &.active{
+            color: #fff;
+
+            .line {
+                opacity: 1;
+            }
+        }
+
+    }
+
+
+    
+}
+
+.tab-content{
+    margin-bottom: 230px;
+}
+
+.tab-content .cont {
+    display: none;
+}
+
+ .tab-content .show {
+     display: block;
+ }
+
+
+ .tab-content .upload {
+     width: 100%;
+     height: 400px;
+    display: block;
+    color: #838688;
+    text-align: center;
+ }
+
+ .submit{
+    cursor: pointer;
+     width: 100%;
+     height: 60px;
+     background-color: $color-blue;
+     border-radius: 100px;
+     border: none;
+     outline: none;
+     color: #fff;
+     font-size: 14px;
+     text-align: center;
+ }

@@ -1,0 +1,58 @@
+@import 'index.scss';
+
+.user-list{
+    border-bottom: none;
+    a{
+        .det {
+            color: #9a9c9e;
+        }
+    }
+}
+
+.bar{
+    margin:5px 30px;
+}
+.e-bg {
+    display: block;
+    height: 8px;
+    background-color:#202429;
+    border-radius: 100px;
+}
+.e-high {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #0f9cee;
+    border-radius: 100px;
+}
+
+.progress{
+    margin: 0 30px;
+    @include webkit(box-sizing,border-box);
+    
+    .prev{
+        float: left;
+        color: #86888a;
+        font-size: 12px;
+    }
+
+    .next{
+        float:right;
+        color: #86888a;
+        font-size: 12px;
+    }
+
+}
+
+.cars-type{
+    display: flex;
+    flex-wrap: wrap;
+
+    img{
+        width: 100px;
+        margin: 10px 8px;
+    }
+}
+

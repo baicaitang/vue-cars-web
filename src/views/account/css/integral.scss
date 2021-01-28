@@ -1,0 +1,56 @@
+@import './index';
+
+.user-list{
+    .tit{
+        color: #f5f5f5;
+        font-size: 16px;
+    }
+
+    .integral {
+        color: $color-blue;
+    }
+
+    .info{
+        position: absolute;
+        top: -32px;
+        right: 0;
+       
+
+        .create-num {
+            text-align: right;
+            margin: 5px 0;
+            // display: inline-block;
+            font-size: 14px;
+            color: $color-blue;
+            
+        }
+
+        .time{
+            color: #6e7174;
+            font-size: 12px;
+        }
+    }
+}
+
+.wrap{
+    position: relative;
+    padding-bottom: 80px;
+
+    .more {
+        margin-top: 38px;
+        margin-left: -50px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        height: 40px;
+        width: 100px;
+        line-height: 40px;
+        border: none;
+        outline: none;
+        border-radius: 100px;
+        background-color: #3e4349;
+        color: #8a8c8f;
+        font-size: 14px;
+        cursor: pointer;
+    }
+}
