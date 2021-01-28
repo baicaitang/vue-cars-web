@@ -1,8 +1,8 @@
 <template>
   <div class="">
-    <Login></Login>
+    <!-- <Login></Login> -->
     <!--cars dom渲染-->
-    <!-- <Cars></Cars> -->
+    <Cars></Cars>
     <!--地图-->
     <Map></Map>
     <!--导航-->
